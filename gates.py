@@ -19,7 +19,7 @@ class Perceptron:
 
             weights : numpy ndarray
                 M x 1 matrix of randomly generated weights
-            
+
             bias : float
                 Randomly generated bias
         """
@@ -51,7 +51,7 @@ class Perceptron:
                 self.bias += self.learning_rate * (label - prediction)
 
     def print_equation(self):
-        """ 
+        """
             Print the equation using weights and bias in the form of
                 w1x1 + w2x2 + ... + b
         """
@@ -98,13 +98,13 @@ if __name__ == "__main__":
         ]
     }
 
-    # perceptron = Perceptron(training['not'], learning_rate=0.01)
+    # perceptron = Perceptron(training['not'])
     # print('1 1 |', perceptron.predict([1, 1]))
     # print('1 0 |', perceptron.predict([1, 0]))
     # print('0 1 |', perceptron.predict([0, 1]))
     # print('0 0 |', perceptron.predict([0, 0]))
 
-    perceptron = Perceptron(training['not'], learning_rate=0.01)
+    perceptron = Perceptron(training['not'])
     print('0 |', perceptron.predict([0]))
     print('1 |', perceptron.predict([1]))
 
